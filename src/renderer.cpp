@@ -11,13 +11,34 @@ Renderer::Renderer( MTL::Device* pDevice, Simulator* pSimulator )
 
 Renderer::~Renderer()
 {
-    _pShaderLibrary->release();
-    _pArgBuffer->release();
-    _pVertexPositionsBuffer->release();
-    _pVertexColorsBuffer->release();
-    _pIndexBuffer->release();
-    _pCommandQueue->release();
-    _pDevice->release();
+   if (_pShaderLibrary) {
+        _pShaderLibrary->release();
+        _pShaderLibrary = nullptr;
+    }
+    if (_pArgBuffer) {
+        _pArgBuffer->release();
+        _pArgBuffer = nullptr;
+    }
+    if (_pVertexPositionsBuffer) {
+        _pVertexPositionsBuffer->release();
+        _pVertexPositionsBuffer = nullptr;
+    }
+    if (_pVertexColorsBuffer) {
+        _pVertexColorsBuffer->release();
+        _pVertexColorsBuffer = nullptr;
+    }
+    if (_pIndexBuffer) {
+        _pIndexBuffer->release();
+        _pIndexBuffer = nullptr;
+    }
+    if (_pCommandQueue) {
+        _pCommandQueue->release();
+        _pCommandQueue = nullptr;
+    }
+    if (_pDevice) {
+        _pDevice->release();
+        _pDevice = nullptr;
+    }
 }
 
 void Renderer::buildShaders()
@@ -69,40 +90,87 @@ void Renderer::buildShaders()
 }
 
 void Renderer::buildMeshes()
-{ 
-    //tested working hardcoded data
-    _positions = {
-        simd::make_float3(-0.8f, 0.8f, 0.0f),
-        simd::make_float3(0.0f, -0.8f, 0.0f),
-        simd::make_float3(0.8f, 0.8f, 0.0f)
-    };
-    _colors = {
-        simd::make_float3(1.0f, 0.3f, 0.2f),
-        simd::make_float3(0.8f, 1.0f, 0.0f),
-        simd::make_float3(0.8f, 0.0f, 1.0f)
-    };
+{
+    // Retrieve grid dimensions
+    const size_t gridWidth = _pSimulator->getGridWidth();
+    const size_t gridHeight = _pSimulator->getGridHeight();
+
+    // Retrieve simulation data
+    float* simulationData = static_cast<float*>(_pSimulator->getSimulationBuffer()->contents());
+
+    // Clear existing mesh data
+    _positions.clear();
+    _colors.clear();
+    _indices.clear();
+
+    // Generate vertex positions and colors dynamically
+    for (size_t j = 0; j < gridHeight; ++j) {
+        for (size_t i = 0; i < gridWidth; ++i) {
+            float value = simulationData[j * gridWidth + i]; // Updated simulation value
+
+            // Map grid coordinates to NDC space
+            float x = -1.0f + 2.0f * (i / static_cast<float>(gridWidth - 1));
+            float y = -1.0f + 2.0f * (j / static_cast<float>(gridHeight - 1));
+
+            // Add vertex position
+            _positions.push_back(simd::make_float3(x, y, 0.0f));
+
+            // Calculate dynamic color based on simulation value
+            float red = (sinf(value + 0.5f) * 0.5f + 0.5f); // Map sine wave to [0, 1]
+            float green = (cosf(value) * 0.5f + 0.5f);      // Alternate color mapping
+            float blue = 0.5f;                              // Constant blue value
+
+            _colors.push_back(simd::make_float3(red, green, blue));
+        }
+    }
+
+    // Generate index buffer (as before, for a grid)
+    for (size_t j = 0; j < gridHeight - 1; ++j) {
+        for (size_t i = 0; i < gridWidth - 1; ++i) {
+            uint32_t topLeft = j * gridWidth + i;
+            uint32_t topRight = topLeft + 1;
+            uint32_t bottomLeft = (j + 1) * gridWidth + i;
+            uint32_t bottomRight = bottomLeft + 1;
+
+            // First triangle
+            _indices.push_back(topLeft);
+            _indices.push_back(bottomLeft);
+            _indices.push_back(topRight);
+
+            // Second triangle
+            _indices.push_back(topRight);
+            _indices.push_back(bottomLeft);
+            _indices.push_back(bottomRight);
+        }
+    }
 }
+
 
 void Renderer::buildBuffers()
 {
-    assert(!_positions.empty() && !_colors.empty());
+    assert(!_positions.empty() && !_colors.empty() && !_indices.empty());
 
     const size_t positionsDataSize = _positions.size() * sizeof(simd::float3);
     const size_t colorsDataSize = _colors.size() * sizeof(simd::float3);
+    const size_t indicesDataSize = _indices.size() * sizeof(uint32_t);
 
+    // Allocate and copy vertex position data
     _pVertexPositionsBuffer = _pDevice->newBuffer(positionsDataSize, MTL::ResourceStorageModeManaged);
-    _pVertexColorsBuffer = _pDevice->newBuffer(colorsDataSize, MTL::ResourceStorageModeManaged);
-
     memcpy(_pVertexPositionsBuffer->contents(), _positions.data(), positionsDataSize);
-    memcpy(_pVertexColorsBuffer->contents(), _colors.data(), colorsDataSize);
-
     _pVertexPositionsBuffer->didModifyRange(NS::Range::Make(0, positionsDataSize));
+
+    // Allocate and copy vertex color data
+    _pVertexColorsBuffer = _pDevice->newBuffer(colorsDataSize, MTL::ResourceStorageModeManaged);
+    memcpy(_pVertexColorsBuffer->contents(), _colors.data(), colorsDataSize);
     _pVertexColorsBuffer->didModifyRange(NS::Range::Make(0, colorsDataSize));
+
+    // Allocate and copy index buffer data
+    _pIndexBuffer = _pDevice->newBuffer(indicesDataSize, MTL::ResourceStorageModeManaged);
+    memcpy(_pIndexBuffer->contents(), _indices.data(), indicesDataSize);
+    _pIndexBuffer->didModifyRange(NS::Range::Make(0, indicesDataSize));
 
     // Argument buffer setup
     using NS::StringEncoding::UTF8StringEncoding;
-    assert(_pShaderLibrary);
-
     MTL::Function* pVertexFn = _pShaderLibrary->newFunction(NS::String::string("vertexMain", UTF8StringEncoding));
     MTL::ArgumentEncoder* pArgEncoder = pVertexFn->newArgumentEncoder(0);
 
@@ -119,24 +187,29 @@ void Renderer::buildBuffers()
 }
 
 
-
-void Renderer::draw( MTK::View* pView )
+void Renderer::draw(MTK::View* pView)
 {
     NS::AutoreleasePool* pPool = NS::AutoreleasePool::alloc()->init();
 
     MTL::CommandBuffer* pCmd = _pCommandQueue->commandBuffer();
     MTL::RenderPassDescriptor* pRpd = pView->currentRenderPassDescriptor();
     assert(pRpd && "Render pass descriptor is null");
-    MTL::RenderCommandEncoder* pEnc = pCmd->renderCommandEncoder(pRpd);
 
-    pEnc->setRenderPipelineState( _pPSO );
-    pEnc->setVertexBuffer( _pArgBuffer, 0, 0 );
-    pEnc->useResource( _pVertexPositionsBuffer, MTL::ResourceUsageRead );
-    pEnc->useResource( _pVertexColorsBuffer, MTL::ResourceUsageRead );
-    pEnc->drawPrimitives( MTL::PrimitiveType::PrimitiveTypeTriangle, NS::UInteger(0), NS::UInteger(3) );
+    MTL::RenderCommandEncoder* pEnc = pCmd->renderCommandEncoder(pRpd);
+    pEnc->setRenderPipelineState(_pPSO);
+    pEnc->setVertexBuffer(_pArgBuffer, 0, 0);
+
+    pEnc->useResource(_pVertexPositionsBuffer, MTL::ResourceUsageRead);
+    pEnc->useResource(_pVertexColorsBuffer, MTL::ResourceUsageRead);
+
+    // Use indexed draw call
+    pEnc->drawIndexedPrimitives(MTL::PrimitiveType::PrimitiveTypeTriangle, 
+                                _indices.size(), 
+                                MTL::IndexType::IndexTypeUInt32, 
+                                _pIndexBuffer, 0);
 
     pEnc->endEncoding();
-    pCmd->presentDrawable( pView->currentDrawable() );
+    pCmd->presentDrawable(pView->currentDrawable());
     pCmd->commit();
 
     pPool->release();

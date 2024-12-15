@@ -28,6 +28,7 @@ class Renderer
         Simulator* _pSimulator;
         std::vector<simd::float3> _positions;
         std::vector<simd::float3> _colors;
+        std::vector<uint32_t> _indices; 
 };
 
 #endif 

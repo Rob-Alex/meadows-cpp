@@ -12,7 +12,7 @@ NS::Menu* AppDelegate::createMenuBar()
 {
     NS::Menu* pMainMenu = NS::Menu::alloc()->init();
     NS::MenuItem* pAppMenuItem = NS::MenuItem::alloc()->init();
-    NS::Menu* pAppMenu = NS::Menu::alloc()->init( NS::String::string( "Appname", NS::StringEncoding::UTF8StringEncoding ) );
+    NS::Menu* pAppMenu = NS::Menu::alloc()->init( NS::String::string( "Meadows", NS::StringEncoding::UTF8StringEncoding ) );
 
     NS::String* appName = NS::RunningApplication::currentApplication()->localizedName();
     NS::String* quitItemName = NS::String::string( "Quit ",  NS::StringEncoding::UTF8StringEncoding )->stringByAppendingString( appName );
@@ -26,7 +26,7 @@ NS::Menu* AppDelegate::createMenuBar()
     pAppMenuItem->setSubmenu( pAppMenu );
 
     NS::MenuItem* pWindowMenuItem = NS::MenuItem::alloc()->init();
-    NS::Menu* pWindowMenu = NS::Menu::alloc()->init( NS::String::string( "Window",  NS::StringEncoding::UTF8StringEncoding ) );
+    NS::Menu* pWindowMenu = NS::Menu::alloc()->init( NS::String::string( "Meadows",  NS::StringEncoding::UTF8StringEncoding ) );
 
     SEL closeWindowCb = NS::MenuItem::registerActionCallback( "windowClose", [](void*, SEL, const NS::Object*){
         auto pApp = NS::Application::sharedApplication();
@@ -76,7 +76,7 @@ void AppDelegate::applicationDidFinishLaunching( NS::Notification* pNotification
     _pMtkView->setDelegate( _pViewDelegate );
 
     _pWindow->setContentView( _pMtkView );
-    _pWindow->setTitle( NS::String::string( "Window", NS::StringEncoding::UTF8StringEncoding ) );
+    _pWindow->setTitle( NS::String::string( "Meadows", NS::StringEncoding::UTF8StringEncoding ) );
 
     _pWindow->makeKeyAndOrderFront( nullptr );
 

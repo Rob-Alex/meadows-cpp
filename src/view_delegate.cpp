@@ -3,7 +3,7 @@
 MTKViewDelegate::MTKViewDelegate( MTL::Device* pDevice )
 : MTK::ViewDelegate()
 {
-    _pSimulator = new Simulator(pDevice, 10, 10); //init with grid dimensions 
+    _pSimulator = new Simulator(pDevice, 100, 100); //init with grid dimensions 
     _pRenderer = new Renderer(pDevice, _pSimulator);
 }
 
@@ -15,5 +15,8 @@ MTKViewDelegate::~MTKViewDelegate()
 
 void MTKViewDelegate::drawInMTKView( MTK::View* pView )
 {
+    _pSimulator->updateSimulation();
+    _pRenderer->buildMeshes();
+    _pRenderer->buildBuffers();
     _pRenderer->draw( pView );
 }
