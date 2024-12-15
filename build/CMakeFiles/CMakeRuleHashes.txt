@@ -1,0 +1,7 @@
+# Hashes of file build rules.
+8944b216fb9b66baf531ff26e10bf4ea shaders/CMakeFiles/CompileShaders
+bf564ad3f4072ff6a245d6ee28bc7bb0 shaders/CMakeFiles/copy_shaders
+5ea31aff01f6e1fb24c16be52852af48 shaders/compute.air
+6dcb5cf68c06ff92df8c3dd86954317a shaders/compute.metallib
+2cafe4020c42c1d896bd311eb28e3956 shaders/shader.air
+889c6067857a324ca0e5c1d789cc2153 shaders/shader.metallib

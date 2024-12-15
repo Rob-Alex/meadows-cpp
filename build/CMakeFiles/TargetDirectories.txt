@@ -1,0 +1,12 @@
+/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles/edit_cache.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles/rebuild_cache.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/src/CMakeFiles/meadows.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/src/CMakeFiles/edit_cache.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/src/CMakeFiles/rebuild_cache.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake/CMakeFiles/METAL_CPP.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake/CMakeFiles/edit_cache.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake/CMakeFiles/rebuild_cache.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/shaders/CMakeFiles/CompileShaders.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/shaders/CMakeFiles/copy_shaders.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/shaders/CMakeFiles/edit_cache.dir
+/Users/robbiealexander/Projects/Cpp/meadows/build/shaders/CMakeFiles/rebuild_cache.dir

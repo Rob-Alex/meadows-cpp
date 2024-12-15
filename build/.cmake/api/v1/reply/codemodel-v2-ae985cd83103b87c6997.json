@@ -1,0 +1,135 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28.3"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "metal-cmake",
+					"jsonFile" : "directory-metal-cmake-Debug-1d16352ccbba2fd4843e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "metal-cmake",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "shaders",
+					"jsonFile" : "directory-shaders-Debug-bf702096f11e1fdd297a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28.3"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "shaders",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "meadows",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "CompileShaders::@8132085bf3b90c3252db",
+					"jsonFile" : "target-CompileShaders-Debug-159759d9783a0388e17a.json",
+					"name" : "CompileShaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "METAL_CPP::@43ca618cd877bd5050bb",
+					"jsonFile" : "target-METAL_CPP-Debug-f31785259eb198edd05b.json",
+					"name" : "METAL_CPP",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "copy_shaders::@8132085bf3b90c3252db",
+					"jsonFile" : "target-copy_shaders-Debug-f984bc3da656b43e3e4e.json",
+					"name" : "copy_shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "meadows::@145eef247bfb46b6828c",
+					"jsonFile" : "target-meadows-Debug-8e3374eec2c2263c5b27.json",
+					"name" : "meadows",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/robbiealexander/Projects/Cpp/meadows/build",
+		"source" : "/Users/robbiealexander/Projects/Cpp/meadows"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
