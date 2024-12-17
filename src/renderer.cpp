@@ -186,6 +186,50 @@ void Renderer::buildBuffers()
     pArgEncoder->release();
 }
 
+void Renderer::updateMeshData()
+{
+    const size_t gridWidth = _pSimulator->getGridWidth();
+    const size_t gridHeight = _pSimulator->getGridHeight();
+
+    // Preallocate memory for efficiency
+    _positions.resize(gridWidth * gridHeight);
+    _colors.resize(gridWidth * gridHeight);
+
+    // Retrieve simulation data
+    float* simulationData = static_cast<float*>(_pSimulator->getSimulationBuffer()->contents());
+
+    for (size_t j = 0; j < gridHeight; ++j) {
+        for (size_t i = 0; i < gridWidth; ++i) {
+            float value = simulationData[j * gridWidth + i];
+
+            float x = -1.0f + 2.0f * (i / static_cast<float>(gridWidth - 1));
+            float y = -1.0f + 2.0f * (j / static_cast<float>(gridHeight - 1));
+
+            _positions[j * gridWidth + i] = simd::make_float3(x, y, 0.0f);
+
+            float red = (cosf(value) * 0.5f + 0.5f); //(sinf(value + 0.5f) * 0.5f + 0.5f);
+            float green = (cosf(value) * 0.5f + 0.5f);
+            float blue = (cosf(value) * 0.5f + 0.5f); //0.5f;
+            _colors[j * gridWidth + i] = simd::make_float3(red, green, blue);
+        }
+    }
+}
+
+void Renderer::updateBuffers()
+{
+    const size_t positionsDataSize = _positions.size() * sizeof(simd::float3);
+    const size_t colorsDataSize = _colors.size() * sizeof(simd::float3);
+
+    assert(_pVertexPositionsBuffer && _pVertexColorsBuffer);
+
+    // Update vertex positions
+    memcpy(_pVertexPositionsBuffer->contents(), _positions.data(), positionsDataSize);
+    _pVertexPositionsBuffer->didModifyRange(NS::Range::Make(0, positionsDataSize));
+
+    // Update vertex colors
+    memcpy(_pVertexColorsBuffer->contents(), _colors.data(), colorsDataSize);
+    _pVertexColorsBuffer->didModifyRange(NS::Range::Make(0, colorsDataSize));
+} 
 
 void Renderer::draw(MTK::View* pView)
 {

@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+if test "$CONFIGURATION" = "Debug"; then :
+  cd /Users/robbiealexander/Projects/Cpp/meadows/shaders
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib
+fi
+if test "$CONFIGURATION" = "Release"; then :
+  cd /Users/robbiealexander/Projects/Cpp/meadows/shaders
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib
+fi
+if test "$CONFIGURATION" = "MinSizeRel"; then :
+  cd /Users/robbiealexander/Projects/Cpp/meadows/shaders
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib
+fi
+if test "$CONFIGURATION" = "RelWithDebInfo"; then :
+  cd /Users/robbiealexander/Projects/Cpp/meadows/shaders
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metallib
+  /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metallib
+fi
+

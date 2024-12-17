@@ -17,7 +17,7 @@ v2f vertex vertexMain( device const VertexData* vertexData [[buffer(0)]], uint v
 {
     v2f o;
     o.position = float4( vertexData->positions[ vertexId ], 1.0 );
-    o.color = half3(vertexData->colors[ vertexId ]);
+    o.color = half3(vertexData->colors[ vertexId ]) ;
     return o;
 }
 

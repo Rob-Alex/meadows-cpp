@@ -15,6 +15,8 @@ class Renderer
         void buildMeshes();
         void buildShaders();
         void buildBuffers();
+        void updateMeshData();
+        void updateBuffers();
         void draw( MTK::View* pView );
     private:
         MTL::Device* _pDevice;
