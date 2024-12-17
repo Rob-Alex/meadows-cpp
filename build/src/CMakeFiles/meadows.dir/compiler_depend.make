@@ -1239,6 +1239,7 @@ src/CMakeFiles/meadows.dir/app_delegate.cpp.o: /Users/robbiealexander/Projects/C
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/app_delegate.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/config.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows/lib/mtl_computer.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/renderer.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/simulator.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/view_delegate.hpp \
@@ -6510,6 +6511,7 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: /Users/robbiealexander/Projects/Cpp/m
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/config.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows/lib/mtl_computer.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/renderer.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/simulator.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/AppKit.hpp \
@@ -7774,6 +7776,7 @@ src/CMakeFiles/meadows.dir/simulator.cpp.o: /Users/robbiealexander/Projects/Cpp/
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/config.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows/lib/mtl_computer.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/simulator.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/AppKit.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/AppKitPrivate.hpp \
@@ -9119,6 +9122,7 @@ src/CMakeFiles/meadows.dir/view_delegate.cpp.o: /Users/robbiealexander/Projects/
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/config.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows/lib/mtl_computer.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/renderer.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/simulator.hpp \
   /Users/robbiealexander/Projects/Cpp/meadows/lib/view_delegate.hpp \
@@ -9246,8 +9250,6 @@ src/CMakeFiles/meadows.dir/view_delegate.cpp.o: /Users/robbiealexander/Projects/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__stop_token/atomic_unique_lock.h:
 
-/Users/robbiealexander/Projects/Cpp/meadows/lib/mtl_computer.hpp:
-
 /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/QuartzCore.hpp:
 
 /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/Metal.hpp:
@@ -9345,6 +9347,8 @@ src/CMakeFiles/meadows.dir/view_delegate.cpp.o: /Users/robbiealexander/Projects/
 /Users/robbiealexander/Projects/Cpp/meadows/lib/simulator.hpp:
 
 /Users/robbiealexander/Projects/Cpp/meadows/lib/renderer.hpp:
+
+/Users/robbiealexander/Projects/Cpp/meadows/lib/mtl_computer.hpp:
 
 /Users/robbiealexander/Projects/Cpp/meadows/lib/config.hpp:
 
