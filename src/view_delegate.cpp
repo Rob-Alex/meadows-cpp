@@ -3,7 +3,8 @@
 MTKViewDelegate::MTKViewDelegate( MTL::Device* pDevice )
 : MTK::ViewDelegate()
 {
-    _pSimulator = new Simulator(pDevice, 100, 100); //init with grid dimensions 
+    _pSimulator = new TestSimulator(pDevice, 100, 100); //init with grid dimensions 
+    _pSimulator->initialize();
     _pRenderer = new Renderer(pDevice, _pSimulator);\
 
 }
@@ -16,13 +17,18 @@ MTKViewDelegate::~MTKViewDelegate()
 
 void MTKViewDelegate::drawInMTKView(MTK::View* pView)
 {
+    // Static variables to calculate FPS
+    static auto lastFPSUpdateTime = std::chrono::high_resolution_clock::now();
+    static size_t frameCount = 0;
+    static double frameTimeAccumulator = 0.0;
+
     // Calculate time elapsed
     static auto startTime = std::chrono::high_resolution_clock::now();
     auto currentTime = std::chrono::high_resolution_clock::now();
     float timeElapsed = std::chrono::duration_cast<std::chrono::microseconds>(currentTime - startTime).count() / 1e6f;
 
     // Update simulation with cumulative time
-    _pSimulator->updateSimulation(timeElapsed);
+    _pSimulator->update(timeElapsed);
 
     // Update renderer with the latest simulation data
     _pRenderer->updateMeshData();
@@ -30,7 +36,29 @@ void MTKViewDelegate::drawInMTKView(MTK::View* pView)
 
     // Draw the updated frame
     _pRenderer->draw(pView);
+
+    // Measure frame duration
     auto endTime = std::chrono::high_resolution_clock::now();
-    auto frameDuration = std::chrono::duration_cast<std::chrono::microseconds>(endTime - currentTime).count();
-    __builtin_printf("Frame Time: %lld μs\n", frameDuration);
+    double frameDuration = std::chrono::duration_cast<std::chrono::microseconds>(endTime - currentTime).count() / 1e6;
+
+    // Accumulate frame time and increment frame count
+    frameTimeAccumulator += frameDuration;
+    frameCount++;
+
+    // Check if 1 second has passed
+    auto elapsedSinceLastUpdate = std::chrono::duration_cast<std::chrono::seconds>(endTime - lastFPSUpdateTime).count();
+    if (elapsedSinceLastUpdate >= 1) {
+        // Calculate average FPS
+        double averageFPS = frameCount / frameTimeAccumulator;
+
+        // Clear the terminal line and print FPS
+        printf("\033[2K\rAverage FPS: %.2f", averageFPS);
+        fflush(stdout); // Force the output to be written immediately
+
+        // Reset for the next interval
+        frameCount = 0;
+        frameTimeAccumulator = 0.0;
+        lastFPSUpdateTime = endTime;
+    }
 }
+

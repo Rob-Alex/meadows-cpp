@@ -13,7 +13,7 @@ class MTKViewDelegate : public MTK::ViewDelegate
 
     private:
         Renderer* _pRenderer;
-        Simulator* _pSimulator;
+        ISimulator* _pSimulator;
 
     std::chrono::high_resolution_clock::time_point _lastPulseTime; // Last time a pulse was applied
     std::chrono::milliseconds _pulseInterval; 

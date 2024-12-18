@@ -11,113 +11,120 @@
 #include <vector>
 #include <iostream>
 
-mtl_computer::mtl_computer(MTL::Device * Device)
+mtl_computer::mtl_computer(MTL::Device * pDevice, bool loadAll)
+: _pDevice(pDevice)
 {
-    _pDevice = Device;
-    NS::Error* error = nullptr;
-    
-    // Load the shader files with .metal from the project
-    auto filepath = NS::String::string("../shaders/compute.metallib", NS::ASCIIStringEncoding);
-    
-    MTL::Library *pComputeLibrary = _pDevice->newLibrary(filepath, &error);
-    
-    if (!pComputeLibrary) {
-        std::cerr << "Failed to find the default library.\n";
-        exit(-1);
-    }
-    
-    //get functions from shader library
-    auto fnNames = pComputeLibrary->functionNames();
-    std::cout << "Functions from 'compute.metallib' loaded. \n";
-    
-    for (size_t i = 0; i < fnNames->count(); i++)
-    {
-        auto names_nsstring = fnNames->object(i)->description();
-        auto names_utf8 = names_nsstring->utf8String();
-        
-        //Show available functions
-        std::cout << names_utf8 << std::endl;
-        
-        // Load each function into map through loop
-        functionMap[names_utf8] = (pComputeLibrary->newFunction(names_nsstring));
-        
-        //create pipeline from function
-        functionPipelineMap[names_utf8] = _pDevice->newComputePipelineState(functionMap[names_utf8], &error);
-        
-        if (!functionPipelineMap[names_utf8])
-        {
-            std::cerr << "Failed to create a PSO for " << names_utf8 << ", error " << error->description()->utf8String() << std::endl;
-            exit(-1);
-        }
-    }
-    
     _pCmdQ = _pDevice->newCommandQueue();
-    if(!_pCmdQ)
-    {
-        std::cerr << "Failed to find command queue. \n";
+    if (!_pCmdQ) {
+        __builtin_printf("Failed to create command queue.\n");
         exit(-1);
     }
+
+    if (loadAll) {
+        loadAllPipelines();
+    }
     
+}
+
+mtl_computer::~mtl_computer()
+{
+    for (auto& [key, pipeline] : functionPipelineMap) {
+        pipeline->release();
+    }
+    _pCmdQ->release();
+}
+
+void mtl_computer::loadAllPipelines()
+{
+    NS::Error* error = nullptr;
+
+    // Load shader library
+    auto filepath = NS::String::string("../shaders/compute.metallib", NS::ASCIIStringEncoding);
+    MTL::Library* pComputeLibrary = _pDevice->newLibrary(filepath, &error);
+
+    if (!pComputeLibrary) {
+        __builtin_printf("Failed to load Metal library.\n");
+        exit(-1);
+    }
+
+    // Iterate through all functions
+    auto fnNames = pComputeLibrary->functionNames();
+    for (size_t i = 0; i < fnNames->count(); ++i) {
+        auto functionName = fnNames->object<NS::String>(i);
+        auto name = functionName->utf8String();
+        loadPipeline(pComputeLibrary, name, name);
+    }
+
+    pComputeLibrary->release();
+}
+
+void mtl_computer::loadPipeline(MTL::Library* library, const std::string& pipelineName, const std::string& functionName)
+{
+    NS::Error* error = nullptr;
+
+    MTL::Function* function = library->newFunction(NS::String::string(functionName.c_str(), NS::ASCIIStringEncoding));
+    if (!function) {
+        __builtin_printf("Failed to load function: %s\n", functionName.c_str());
+        exit(-1);
+    }
+
+    MTL::ComputePipelineState* pipeline = _pDevice->newComputePipelineState(function, &error);
+    if (!pipeline) {
+        __builtin_printf("Failed to create pipeline for function: %s, Error: %s\n", functionName.c_str(),
+                         error ? error->description()->utf8String() : "Unknown error");
+        function->release();
+        exit(-1);
+    }
+
+    functionPipelineMap[pipelineName] = pipeline;
+
+    function->release();
+}
+
+void mtl_computer::Blocking2D(std::vector<MTL::Buffer*> buffers, size_t rows, size_t columns, const char* method, void* constants, size_t constantsSize)
+{
+    MTL::CommandBuffer* pCmdBuff = _pCmdQ->commandBuffer();
+    assert(pCmdBuff);
+
+    MTL::ComputeCommandEncoder* pComputeEnc = pCmdBuff->computeCommandEncoder();
+    assert(pComputeEnc);
+
+    // Check if pipeline exists
+    auto it = functionPipelineMap.find(method);
+    if (it == functionPipelineMap.end()) {
+        __builtin_printf("Pipeline not found for method: %s", method);
+        exit(-1);
+    }
+
+    pComputeEnc->setComputePipelineState(functionPipelineMap[method]);
+
+    // Set buffers
+    for (size_t i = 0; i < buffers.size(); ++i) {
+        pComputeEnc->setBuffer(buffers[i], 0, i);
+    }
+
+    // Set optional constant data
+    if (constants && constantsSize > 0) {
+        pComputeEnc->setBytes(constants, constantsSize, buffers.size());
+    }
+
+    // Calculate thread group size
+    NS::UInteger maxThreads = functionPipelineMap[method]->maxTotalThreadsPerThreadgroup();
+    NS::UInteger threadGroupWidth = std::min(maxThreads, static_cast<NS::UInteger>(rows));
+    MTL::Size threadgroupSize = MTL::Size::Make(threadGroupWidth, 1, 1);
+    MTL::Size gridSize = MTL::Size::Make(rows, columns, 1);
+
+    // Dispatch compute threads
+    pComputeEnc->dispatchThreads(gridSize, threadgroupSize);
+    pComputeEnc->endEncoding();
+
+    pCmdBuff->commit();
+    pCmdBuff->waitUntilCompleted();
 }
 
 void mtl_computer::Blocking1D(std::vector<MTL::Buffer*> buffers, size_t arrayLength, const char* method)
 {
-    MTL::CommandBuffer* pCmdBuff = _pCmdQ->commandBuffer();
-    assert(pCmdBuff);
-    
-    MTL::ComputeCommandEncoder* pComputeEnc = pCmdBuff->computeCommandEncoder();
-    assert(pComputeEnc);
-    
-    pComputeEnc->setComputePipelineState(functionPipelineMap[method]);
-    for (std::size_t i = 0; i < buffers.size(); ++i)
-    {
-        pComputeEnc->setBuffer(buffers[i], 0, i);
-    }
-    
-    NS::UInteger threadGroupSize = functionPipelineMap[method]->maxTotalThreadsPerThreadgroup();
-    if (threadGroupSize > arrayLength) threadGroupSize = arrayLength;
-    
-    //aspect ratio of kernel operation 1:1
-    MTL::Size threadgroupSize = MTL::Size::Make(threadGroupSize, 1, 1);
-    //Kernel operation on row vector
-    MTL::Size gridSize = MTL::Size::Make(arrayLength, 1, 1);
-   
-    // encode compute command
-    pComputeEnc->dispatchThreads(gridSize, threadgroupSize);
-    pComputeEnc->endEncoding();
-    
-    pCmdBuff->commit();
-    pCmdBuff->waitUntilCompleted();
-    
-}
-
-void mtl_computer::Blocking2D(std::vector<MTL::Buffer*> buffers, size_t rows, size_t columns, const char* method)
-{
-    MTL::CommandBuffer* pCmdBuff = _pCmdQ->commandBuffer();
-    assert(pCmdBuff);
-    
-    MTL::ComputeCommandEncoder* pComputeEnc = pCmdBuff->computeCommandEncoder();
-    assert(pComputeEnc);
-    
-    pComputeEnc->setComputePipelineState(functionPipelineMap[method]);
-    for (std::size_t i = 0; i < buffers.size(); ++i)
-    {
-        pComputeEnc->setBuffer(buffers[i], 0, i);
-    }
-    NS::UInteger threadGroupSize = functionPipelineMap[method]->maxTotalThreadsPerThreadgroup();
-    if (threadGroupSize > rows ) threadGroupSize = rows;
-    
-    // Kernel operation on a 2D Matrix (width, height, depth
-    MTL::Size threadgroupSize = MTL::Size::Make(1, threadGroupSize/1 , 1);
-    
-    MTL::Size gridSize = MTL::Size::Make(rows, columns, 1);
-    
-    //encode the compute command
-    pComputeEnc->dispatchThreads(gridSize, threadgroupSize);
-    pComputeEnc->endEncoding();
-    
-    pCmdBuff->commit();
-    pCmdBuff->waitUntilCompleted();
+    Blocking2D(buffers, arrayLength, 1, method);  
 }
 
 
@@ -141,11 +148,6 @@ void mtl_computer::Multiply1DArrays(MTL::Buffer* x_array, MTL::Buffer* y_array, 
     const char* method = "multiply_1D_arrays";
     
     Blocking1D(buffers, arrayLength, method);
-}
-
-mtl_computer::~mtl_computer()
-{
-    _pCmdQ->release();
 }
 
 void mtl_computer::Add2DArrays(MTL::Buffer* A,

@@ -10,7 +10,7 @@
 class Renderer
 {
     public:
-        Renderer( MTL::Device* pDevice , Simulator* pSimulator);
+        Renderer( MTL::Device* pDevice , ISimulator* pSimulator);
         ~Renderer();
         void buildMeshes();
         void buildShaders();
@@ -27,7 +27,7 @@ class Renderer
         MTL::Buffer* _pVertexPositionsBuffer;
         MTL::Buffer* _pVertexColorsBuffer;      
         MTL::Buffer* _pIndexBuffer;
-        Simulator* _pSimulator;
+        ISimulator* _pSimulator;
         std::vector<simd::float3> _positions;
         std::vector<simd::float3> _colors;
         std::vector<uint32_t> _indices; 

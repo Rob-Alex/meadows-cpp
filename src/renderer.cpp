@@ -1,6 +1,6 @@
 #include "renderer.hpp"
 
-Renderer::Renderer( MTL::Device* pDevice, Simulator* pSimulator )
+Renderer::Renderer( MTL::Device* pDevice, ISimulator* pSimulator )
 : _pDevice( pDevice->retain() ), _pSimulator(pSimulator)
 {
     _pCommandQueue = _pDevice->newCommandQueue();
