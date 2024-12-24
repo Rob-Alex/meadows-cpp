@@ -27,15 +27,18 @@ void MTKViewDelegate::drawInMTKView(MTK::View* pView)
     auto currentTime = std::chrono::high_resolution_clock::now();
     float timeElapsed = std::chrono::duration_cast<std::chrono::microseconds>(currentTime - startTime).count() / 1e6f;
 
+    MTL::CommandBuffer* pSimulationCmd = _pSimulator->getCommandQueue()->commandBuffer();
     // Update simulation with cumulative time
     _pSimulator->update(timeElapsed);
+    pSimulationCmd->commit();
 
     // Update renderer with the latest simulation data
+    MTL::CommandBuffer* pRenderCmd = _pRenderer->getCommandQueue()->commandBuffer();
     _pRenderer->updateMeshData();
     _pRenderer->updateBuffers();
-
     // Draw the updated frame
     _pRenderer->draw(pView);
+    pRenderCmd->commit();
 
     // Measure frame duration
     auto endTime = std::chrono::high_resolution_clock::now();

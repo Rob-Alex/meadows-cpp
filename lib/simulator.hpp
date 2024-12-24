@@ -4,10 +4,6 @@
 #include "config.hpp"
 #include "mtl_computer.hpp"
 #include <map>
-#include <list>
-#include <vector>
-
-
 /// @brief Simulator class 
 // deprecated -----------------------------------------------------------------------//
 class Simulator {                                                                    
@@ -47,6 +43,7 @@ class ISimulator {
         virtual MTL::Buffer* getSimulationBuffer() const = 0;
         virtual size_t getGridWidth() const = 0;
         virtual size_t getGridHeight() const = 0;
+        virtual MTL::CommandQueue* getCommandQueue() const = 0; 
 };
 
 //create test simulator for testing 
@@ -59,10 +56,13 @@ class TestSimulator : public ISimulator
         void initialize() override; 
         void update(float timeStep) override; 
         void reset() override;
+
         MTL::Buffer* getSimulationBuffer() const override;
 
         size_t getGridWidth() const override { return _gridWidth; } 
         size_t getGridHeight() const override { return _gridHeight; }
+
+        MTL::CommandQueue* getCommandQueue() const override { return _pCmdQ; }
     private: 
         void loadComputePipelines();
         
@@ -79,7 +79,64 @@ class TestSimulator : public ISimulator
 
 class FDTDSolver : public ISimulator 
 {
-    
-}
+    public:
+        FDTDSolver(MTL::Device* pDevice, size_t, size_t);
+        ~FDTDSolver();
+
+        void initialize() override; 
+        void update(float timeStep) override; 
+        void reset() override;
+
+        MTL::Buffer* getElectricFieldBuffer() const; 
+        MTL::Buffer* getMagneticFieldBuffer() const; 
+
+        size_t getGridWidth() const override { return _gridWidth; }
+        size_t getGridHeight() const override { return _gridHeight; }
+
+        MTL::CommandQueue* getCommandQueue() const override { return _pCmdQ; }
+
+    private:
+        void loadComputePipelines();
+
+        size_t _gridWidth, _gridHeight;
+        MTL::Device* _pDevice;
+        MTL::CommandQueue* _pCmdQ;
+
+        MTL::Buffer* _pElectricFieldBuffer;
+        MTL::Buffer* _pMagneticFieldBuffer; 
+
+        mtl_computer _gpuComputer;
+};
+
+class MaxwellSolver : public ISimulator
+{
+    public:
+        MaxwellSolver(MTL::Device* pDevice, size_t, size_t);
+        ~MaxwellSolver();
+
+        void initialize() override; 
+        void update(float timeStep) override; 
+        void reset() override;
+
+        MTL::Buffer* getElectricFieldBuffer() const; 
+        MTL::Buffer* getMagneticFieldBuffer() const; 
+
+        size_t getGridWidth() const override { return _gridWidth; }
+        size_t getGridHeight() const override { return _gridHeight; }
+
+        MTL::CommandQueue* getCommandQueue() const override { return _pCmdQ; }   
+
+    private:
+        void loadComputePipelines();
+
+        size_t _gridWidth, _gridHeight;
+        MTL::Device* _pDevice;
+        MTL::CommandQueue* _pCmdQ;
+
+        MTL::Buffer* _pChargeDensityFieldBuffer;
+        MTL::Buffer* _pFieldBuffer; 
+
+        mtl_computer _gpuComputer;
+};
 
 #endif 

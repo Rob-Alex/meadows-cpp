@@ -18,6 +18,7 @@ class Renderer
         void updateMeshData();
         void updateBuffers();
         void draw( MTK::View* pView );
+        MTL::CommandQueue* getCommandQueue() { return _pCommandQueue; }
     private:
         MTL::Device* _pDevice;
         MTL::CommandQueue* _pCommandQueue;

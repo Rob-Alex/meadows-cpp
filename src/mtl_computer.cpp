@@ -6,10 +6,8 @@
 //
 
 #include "mtl_computer.hpp"
-#include <list>
 #include <map>
 #include <vector>
-#include <iostream>
 
 mtl_computer::mtl_computer(MTL::Device * pDevice, bool loadAll)
 : _pDevice(pDevice)
