@@ -6,6 +6,7 @@
 #include <map>
 /// @brief Simulator class 
 // deprecated -----------------------------------------------------------------------//
+/* 
 class Simulator {                                                                    
     public:                         
         Simulator(MTL::Device* pDevice, size_t, size_t);
@@ -31,6 +32,7 @@ class Simulator {
 
         mtl_computer _gpuComputer;
 };
+*/
 // deprecated -----------------------------------------------------------------------
 
 // Abstract object simulator interface for solvers
@@ -43,6 +45,7 @@ class ISimulator {
         virtual MTL::Buffer* getSimulationBuffer() const = 0;
         virtual size_t getGridWidth() const = 0;
         virtual size_t getGridHeight() const = 0;
+        //virtual void applyPulse(float, float, float) = 0;
         virtual MTL::CommandQueue* getCommandQueue() const = 0; 
 };
 
@@ -51,7 +54,7 @@ class TestSimulator : public ISimulator
 {
     public:
         TestSimulator(MTL::Device* pDevice, size_t, size_t);
-        ~TestSimulator();
+        ~TestSimulator(); 
 
         void initialize() override; 
         void update(float timeStep) override; 
@@ -61,22 +64,21 @@ class TestSimulator : public ISimulator
 
         size_t getGridWidth() const override { return _gridWidth; } 
         size_t getGridHeight() const override { return _gridHeight; }
-
+        //void applyPulse(float, float, float) override;
         MTL::CommandQueue* getCommandQueue() const override { return _pCmdQ; }
+        
     private: 
         void loadComputePipelines();
         
         size_t _gridWidth, _gridHeight;
         MTL::Device* _pDevice;
         MTL::CommandQueue* _pCmdQ;
-
-        // this is the simulation data
-        // could be _pElectricFieldBuffer or pTemperatureFieldBuffer for example 
         MTL::Buffer* _pSimulationBuffer;
+        mtl_computer _gpuComputer;};
 
-        mtl_computer _gpuComputer;
-};
 
+ // TODO: Implement these classes
+ /* 
 class FDTDSolver : public ISimulator 
 {
     public:
@@ -86,7 +88,7 @@ class FDTDSolver : public ISimulator
         void initialize() override; 
         void update(float timeStep) override; 
         void reset() override;
-
+        void applyPulse(float, float, float) override; 
         MTL::Buffer* getElectricFieldBuffer() const; 
         MTL::Buffer* getMagneticFieldBuffer() const; 
 
@@ -107,20 +109,18 @@ class FDTDSolver : public ISimulator
 
         mtl_computer _gpuComputer;
 };
+*/
 
 class MaxwellSolver : public ISimulator
 {
     public:
         MaxwellSolver(MTL::Device* pDevice, size_t, size_t);
-        ~MaxwellSolver();
+        ~MaxwellSolver() noexcept override; 
 
         void initialize() override; 
         void update(float timeStep) override; 
         void reset() override;
-
-        MTL::Buffer* getElectricFieldBuffer() const; 
-        MTL::Buffer* getMagneticFieldBuffer() const; 
-
+        MTL::Buffer*  getSimulationBuffer() const override { return _pChargeDensityBuffer; } 
         size_t getGridWidth() const override { return _gridWidth; }
         size_t getGridHeight() const override { return _gridHeight; }
 
@@ -133,8 +133,8 @@ class MaxwellSolver : public ISimulator
         MTL::Device* _pDevice;
         MTL::CommandQueue* _pCmdQ;
 
-        MTL::Buffer* _pChargeDensityFieldBuffer;
-        MTL::Buffer* _pFieldBuffer; 
+        MTL::Buffer* _pChargeDensityBuffer;
+        MTL::Buffer* _pPotentialBuffer; 
 
         mtl_computer _gpuComputer;
 };

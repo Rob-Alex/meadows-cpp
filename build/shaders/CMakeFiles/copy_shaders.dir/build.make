@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows
+CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows/build
+CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp/build
 
 # Utility rule file for copy_shaders.
 
@@ -67,8 +67,8 @@ include shaders/CMakeFiles/copy_shaders.dir/compiler_depend.make
 include shaders/CMakeFiles/copy_shaders.dir/progress.make
 
 shaders/CMakeFiles/copy_shaders:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/compute.metallib /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/compute.metallib
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/shader.metallib /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/shader.metallib
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/compute.metallib /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/compute.metallib
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && /usr/local/bin/cmake -E copy /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/shader.metallib /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/shader.metallib
 
 copy_shaders: shaders/CMakeFiles/copy_shaders
 copy_shaders: shaders/CMakeFiles/copy_shaders.dir/build.make
@@ -79,10 +79,10 @@ shaders/CMakeFiles/copy_shaders.dir/build: copy_shaders
 .PHONY : shaders/CMakeFiles/copy_shaders.dir/build
 
 shaders/CMakeFiles/copy_shaders.dir/clean:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && $(CMAKE_COMMAND) -P CMakeFiles/copy_shaders.dir/cmake_clean.cmake
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && $(CMAKE_COMMAND) -P CMakeFiles/copy_shaders.dir/cmake_clean.cmake
 .PHONY : shaders/CMakeFiles/copy_shaders.dir/clean
 
 shaders/CMakeFiles/copy_shaders.dir/depend:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/robbiealexander/Projects/Cpp/meadows /Users/robbiealexander/Projects/Cpp/meadows/shaders /Users/robbiealexander/Projects/Cpp/meadows/build /Users/robbiealexander/Projects/Cpp/meadows/build/shaders /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/CMakeFiles/copy_shaders.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/robbiealexander/Projects/Cpp/meadows-cpp /Users/robbiealexander/Projects/Cpp/meadows-cpp/shaders /Users/robbiealexander/Projects/Cpp/meadows-cpp/build /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/CMakeFiles/copy_shaders.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : shaders/CMakeFiles/copy_shaders.dir/depend
 

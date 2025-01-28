@@ -1,6 +1,6 @@
 src/CMakeFiles/meadows.dir/cpu_computer.cpp.o: \
-  /Users/robbiealexander/Projects/Cpp/meadows/src/cpu_computer.cpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/lib/cpu_computer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/src/cpu_computer.cpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/lib/cpu_computer.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config_site \

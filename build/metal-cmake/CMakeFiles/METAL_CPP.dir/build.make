@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows
+CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows/build
+CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp/build
 
 # Include any dependencies generated for this target.
 include metal-cmake/CMakeFiles/METAL_CPP.dir/depend.make
@@ -70,18 +70,18 @@ include metal-cmake/CMakeFiles/METAL_CPP.dir/progress.make
 include metal-cmake/CMakeFiles/METAL_CPP.dir/flags.make
 
 metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o: metal-cmake/CMakeFiles/METAL_CPP.dir/flags.make
-metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o: /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/definition.cpp
+metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o: /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/definition.cpp
 metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o: metal-cmake/CMakeFiles/METAL_CPP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o -MF CMakeFiles/METAL_CPP.dir/definition.cpp.o.d -o CMakeFiles/METAL_CPP.dir/definition.cpp.o -c /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/definition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o -MF CMakeFiles/METAL_CPP.dir/definition.cpp.o.d -o CMakeFiles/METAL_CPP.dir/definition.cpp.o -c /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/definition.cpp
 
 metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/METAL_CPP.dir/definition.cpp.i"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/definition.cpp > CMakeFiles/METAL_CPP.dir/definition.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/definition.cpp > CMakeFiles/METAL_CPP.dir/definition.cpp.i
 
 metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/METAL_CPP.dir/definition.cpp.s"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/definition.cpp -o CMakeFiles/METAL_CPP.dir/definition.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/definition.cpp -o CMakeFiles/METAL_CPP.dir/definition.cpp.s
 
 # Object files for target METAL_CPP
 METAL_CPP_OBJECTS = \
@@ -93,19 +93,19 @@ METAL_CPP_EXTERNAL_OBJECTS =
 metal-cmake/libMETAL_CPP.a: metal-cmake/CMakeFiles/METAL_CPP.dir/definition.cpp.o
 metal-cmake/libMETAL_CPP.a: metal-cmake/CMakeFiles/METAL_CPP.dir/build.make
 metal-cmake/libMETAL_CPP.a: metal-cmake/CMakeFiles/METAL_CPP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMETAL_CPP.a"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake && $(CMAKE_COMMAND) -P CMakeFiles/METAL_CPP.dir/cmake_clean_target.cmake
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/METAL_CPP.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMETAL_CPP.a"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake && $(CMAKE_COMMAND) -P CMakeFiles/METAL_CPP.dir/cmake_clean_target.cmake
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/METAL_CPP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 metal-cmake/CMakeFiles/METAL_CPP.dir/build: metal-cmake/libMETAL_CPP.a
 .PHONY : metal-cmake/CMakeFiles/METAL_CPP.dir/build
 
 metal-cmake/CMakeFiles/METAL_CPP.dir/clean:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake && $(CMAKE_COMMAND) -P CMakeFiles/METAL_CPP.dir/cmake_clean.cmake
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake && $(CMAKE_COMMAND) -P CMakeFiles/METAL_CPP.dir/cmake_clean.cmake
 .PHONY : metal-cmake/CMakeFiles/METAL_CPP.dir/clean
 
 metal-cmake/CMakeFiles/METAL_CPP.dir/depend:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/robbiealexander/Projects/Cpp/meadows /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake /Users/robbiealexander/Projects/Cpp/meadows/build /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake /Users/robbiealexander/Projects/Cpp/meadows/build/metal-cmake/CMakeFiles/METAL_CPP.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/robbiealexander/Projects/Cpp/meadows-cpp /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake /Users/robbiealexander/Projects/Cpp/meadows-cpp/build /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/metal-cmake/CMakeFiles/METAL_CPP.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : metal-cmake/CMakeFiles/METAL_CPP.dir/depend
 

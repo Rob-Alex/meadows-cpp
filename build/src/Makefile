@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows
+CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows/build
+CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles /Users/robbiealexander/Projects/Cpp/meadows/build/src//CMakeFiles/progress.marks
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 0
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/src//CMakeFiles/progress.marks
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/meadows.dir/rule:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/meadows.dir/rule
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/meadows.dir/rule
 .PHONY : src/CMakeFiles/meadows.dir/rule
 
 # Convenience name for target.
@@ -127,39 +127,39 @@ meadows: src/CMakeFiles/meadows.dir/rule
 
 # fast build rule for target.
 meadows/fast:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/build
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/build
 .PHONY : meadows/fast
 
-app_delegate.o: app_delegate.cpp.o
-.PHONY : app_delegate.o
+app.o: app.cpp.o
+.PHONY : app.o
 
 # target to build an object file
-app_delegate.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/app_delegate.cpp.o
-.PHONY : app_delegate.cpp.o
+app.cpp.o:
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/app.cpp.o
+.PHONY : app.cpp.o
 
-app_delegate.i: app_delegate.cpp.i
-.PHONY : app_delegate.i
+app.i: app.cpp.i
+.PHONY : app.i
 
 # target to preprocess a source file
-app_delegate.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/app_delegate.cpp.i
-.PHONY : app_delegate.cpp.i
+app.cpp.i:
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/app.cpp.i
+.PHONY : app.cpp.i
 
-app_delegate.s: app_delegate.cpp.s
-.PHONY : app_delegate.s
+app.s: app.cpp.s
+.PHONY : app.s
 
 # target to generate assembly for a file
-app_delegate.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/app_delegate.cpp.s
-.PHONY : app_delegate.cpp.s
+app.cpp.s:
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/app.cpp.s
+.PHONY : app.cpp.s
 
 benchmarking.o: benchmarking.cpp.o
 .PHONY : benchmarking.o
 
 # target to build an object file
 benchmarking.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/benchmarking.cpp.o
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/benchmarking.cpp.o
 .PHONY : benchmarking.cpp.o
 
 benchmarking.i: benchmarking.cpp.i
@@ -167,7 +167,7 @@ benchmarking.i: benchmarking.cpp.i
 
 # target to preprocess a source file
 benchmarking.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/benchmarking.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/benchmarking.cpp.i
 .PHONY : benchmarking.cpp.i
 
 benchmarking.s: benchmarking.cpp.s
@@ -175,7 +175,7 @@ benchmarking.s: benchmarking.cpp.s
 
 # target to generate assembly for a file
 benchmarking.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/benchmarking.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/benchmarking.cpp.s
 .PHONY : benchmarking.cpp.s
 
 cpu_computer.o: cpu_computer.cpp.o
@@ -183,7 +183,7 @@ cpu_computer.o: cpu_computer.cpp.o
 
 # target to build an object file
 cpu_computer.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/cpu_computer.cpp.o
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/cpu_computer.cpp.o
 .PHONY : cpu_computer.cpp.o
 
 cpu_computer.i: cpu_computer.cpp.i
@@ -191,7 +191,7 @@ cpu_computer.i: cpu_computer.cpp.i
 
 # target to preprocess a source file
 cpu_computer.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/cpu_computer.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/cpu_computer.cpp.i
 .PHONY : cpu_computer.cpp.i
 
 cpu_computer.s: cpu_computer.cpp.s
@@ -199,15 +199,23 @@ cpu_computer.s: cpu_computer.cpp.s
 
 # target to generate assembly for a file
 cpu_computer.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/cpu_computer.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/cpu_computer.cpp.s
 .PHONY : cpu_computer.cpp.s
+
+glfw_adapter.o: glfw_adapter.mm.o
+.PHONY : glfw_adapter.o
+
+# target to build an object file
+glfw_adapter.mm.o:
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/glfw_adapter.mm.o
+.PHONY : glfw_adapter.mm.o
 
 grid.o: grid.cpp.o
 .PHONY : grid.o
 
 # target to build an object file
 grid.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/grid.cpp.o
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/grid.cpp.o
 .PHONY : grid.cpp.o
 
 grid.i: grid.cpp.i
@@ -215,7 +223,7 @@ grid.i: grid.cpp.i
 
 # target to preprocess a source file
 grid.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/grid.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/grid.cpp.i
 .PHONY : grid.cpp.i
 
 grid.s: grid.cpp.s
@@ -223,7 +231,7 @@ grid.s: grid.cpp.s
 
 # target to generate assembly for a file
 grid.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/grid.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/grid.cpp.s
 .PHONY : grid.cpp.s
 
 main.o: main.cpp.o
@@ -231,7 +239,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/main.cpp.o
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -239,7 +247,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/main.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -247,7 +255,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/main.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mtl_computer.o: mtl_computer.cpp.o
@@ -255,7 +263,7 @@ mtl_computer.o: mtl_computer.cpp.o
 
 # target to build an object file
 mtl_computer.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/mtl_computer.cpp.o
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/mtl_computer.cpp.o
 .PHONY : mtl_computer.cpp.o
 
 mtl_computer.i: mtl_computer.cpp.i
@@ -263,7 +271,7 @@ mtl_computer.i: mtl_computer.cpp.i
 
 # target to preprocess a source file
 mtl_computer.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/mtl_computer.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/mtl_computer.cpp.i
 .PHONY : mtl_computer.cpp.i
 
 mtl_computer.s: mtl_computer.cpp.s
@@ -271,7 +279,7 @@ mtl_computer.s: mtl_computer.cpp.s
 
 # target to generate assembly for a file
 mtl_computer.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/mtl_computer.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/mtl_computer.cpp.s
 .PHONY : mtl_computer.cpp.s
 
 renderer.o: renderer.cpp.o
@@ -279,7 +287,7 @@ renderer.o: renderer.cpp.o
 
 # target to build an object file
 renderer.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/renderer.cpp.o
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/renderer.cpp.o
 .PHONY : renderer.cpp.o
 
 renderer.i: renderer.cpp.i
@@ -287,7 +295,7 @@ renderer.i: renderer.cpp.i
 
 # target to preprocess a source file
 renderer.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/renderer.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/renderer.cpp.i
 .PHONY : renderer.cpp.i
 
 renderer.s: renderer.cpp.s
@@ -295,7 +303,7 @@ renderer.s: renderer.cpp.s
 
 # target to generate assembly for a file
 renderer.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/renderer.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/renderer.cpp.s
 .PHONY : renderer.cpp.s
 
 simulator.o: simulator.cpp.o
@@ -303,7 +311,7 @@ simulator.o: simulator.cpp.o
 
 # target to build an object file
 simulator.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/simulator.cpp.o
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/simulator.cpp.o
 .PHONY : simulator.cpp.o
 
 simulator.i: simulator.cpp.i
@@ -311,7 +319,7 @@ simulator.i: simulator.cpp.i
 
 # target to preprocess a source file
 simulator.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/simulator.cpp.i
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/simulator.cpp.i
 .PHONY : simulator.cpp.i
 
 simulator.s: simulator.cpp.s
@@ -319,32 +327,8 @@ simulator.s: simulator.cpp.s
 
 # target to generate assembly for a file
 simulator.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/simulator.cpp.s
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/simulator.cpp.s
 .PHONY : simulator.cpp.s
-
-view_delegate.o: view_delegate.cpp.o
-.PHONY : view_delegate.o
-
-# target to build an object file
-view_delegate.cpp.o:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/view_delegate.cpp.o
-.PHONY : view_delegate.cpp.o
-
-view_delegate.i: view_delegate.cpp.i
-.PHONY : view_delegate.i
-
-# target to preprocess a source file
-view_delegate.cpp.i:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/view_delegate.cpp.i
-.PHONY : view_delegate.cpp.i
-
-view_delegate.s: view_delegate.cpp.s
-.PHONY : view_delegate.s
-
-# target to generate assembly for a file
-view_delegate.cpp.s:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/view_delegate.cpp.s
-.PHONY : view_delegate.cpp.s
 
 # Help Target
 help:
@@ -355,15 +339,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... meadows"
-	@echo "... app_delegate.o"
-	@echo "... app_delegate.i"
-	@echo "... app_delegate.s"
+	@echo "... app.o"
+	@echo "... app.i"
+	@echo "... app.s"
 	@echo "... benchmarking.o"
 	@echo "... benchmarking.i"
 	@echo "... benchmarking.s"
 	@echo "... cpu_computer.o"
 	@echo "... cpu_computer.i"
 	@echo "... cpu_computer.s"
+	@echo "... glfw_adapter.o"
 	@echo "... grid.o"
 	@echo "... grid.i"
 	@echo "... grid.s"
@@ -379,9 +364,6 @@ help:
 	@echo "... simulator.o"
 	@echo "... simulator.i"
 	@echo "... simulator.s"
-	@echo "... view_delegate.o"
-	@echo "... view_delegate.i"
-	@echo "... view_delegate.s"
 .PHONY : help
 
 
@@ -393,6 +375,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

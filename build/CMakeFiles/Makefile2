@@ -54,10 +54,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows
+CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows/build
+CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -135,14 +135,14 @@ src/CMakeFiles/meadows.dir/all: metal-cmake/CMakeFiles/METAL_CPP.dir/all
 src/CMakeFiles/meadows.dir/all: shaders/CMakeFiles/CompileShaders.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/meadows.dir/build.make src/CMakeFiles/meadows.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16 "Built target meadows"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16 "Built target meadows"
 .PHONY : src/CMakeFiles/meadows.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/meadows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/meadows.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/meadows.dir/rule
 
 # Convenience name for target.
@@ -161,14 +161,14 @@ src/CMakeFiles/meadows.dir/clean:
 metal-cmake/CMakeFiles/METAL_CPP.dir/all:
 	$(MAKE) $(MAKESILENT) -f metal-cmake/CMakeFiles/METAL_CPP.dir/build.make metal-cmake/CMakeFiles/METAL_CPP.dir/depend
 	$(MAKE) $(MAKESILENT) -f metal-cmake/CMakeFiles/METAL_CPP.dir/build.make metal-cmake/CMakeFiles/METAL_CPP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=5,6 "Built target METAL_CPP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=5,6 "Built target METAL_CPP"
 .PHONY : metal-cmake/CMakeFiles/METAL_CPP.dir/all
 
 # Build rule for subdir invocation for target.
 metal-cmake/CMakeFiles/METAL_CPP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 metal-cmake/CMakeFiles/METAL_CPP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 0
 .PHONY : metal-cmake/CMakeFiles/METAL_CPP.dir/rule
 
 # Convenience name for target.
@@ -187,14 +187,14 @@ metal-cmake/CMakeFiles/METAL_CPP.dir/clean:
 shaders/CMakeFiles/CompileShaders.dir/all:
 	$(MAKE) $(MAKESILENT) -f shaders/CMakeFiles/CompileShaders.dir/build.make shaders/CMakeFiles/CompileShaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f shaders/CMakeFiles/CompileShaders.dir/build.make shaders/CMakeFiles/CompileShaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=1,2,3,4 "Built target CompileShaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=1,2,3,4 "Built target CompileShaders"
 .PHONY : shaders/CMakeFiles/CompileShaders.dir/all
 
 # Build rule for subdir invocation for target.
 shaders/CMakeFiles/CompileShaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shaders/CMakeFiles/CompileShaders.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 0
 .PHONY : shaders/CMakeFiles/CompileShaders.dir/rule
 
 # Convenience name for target.
@@ -213,14 +213,14 @@ shaders/CMakeFiles/CompileShaders.dir/clean:
 shaders/CMakeFiles/copy_shaders.dir/all: shaders/CMakeFiles/CompileShaders.dir/all
 	$(MAKE) $(MAKESILENT) -f shaders/CMakeFiles/copy_shaders.dir/build.make shaders/CMakeFiles/copy_shaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f shaders/CMakeFiles/copy_shaders.dir/build.make shaders/CMakeFiles/copy_shaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num= "Built target copy_shaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num= "Built target copy_shaders"
 .PHONY : shaders/CMakeFiles/copy_shaders.dir/all
 
 # Build rule for subdir invocation for target.
 shaders/CMakeFiles/copy_shaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shaders/CMakeFiles/copy_shaders.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles 0
 .PHONY : shaders/CMakeFiles/copy_shaders.dir/rule
 
 # Convenience name for target.

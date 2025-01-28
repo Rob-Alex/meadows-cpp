@@ -37,7 +37,7 @@ void mtl_computer::loadAllPipelines()
     NS::Error* error = nullptr;
 
     // Load shader library
-    auto filepath = NS::String::string("../shaders/compute.metallib", NS::ASCIIStringEncoding);
+    auto* filepath = NS::String::string("../shaders/compute.metallib", NS::ASCIIStringEncoding);
     MTL::Library* pComputeLibrary = _pDevice->newLibrary(filepath, &error);
 
     if (!pComputeLibrary) {
@@ -46,10 +46,10 @@ void mtl_computer::loadAllPipelines()
     }
 
     // Iterate through all functions
-    auto fnNames = pComputeLibrary->functionNames();
+    auto* fnNames = pComputeLibrary->functionNames();
     for (size_t i = 0; i < fnNames->count(); ++i) {
-        auto functionName = fnNames->object<NS::String>(i);
-        auto name = functionName->utf8String();
+        auto* functionName = fnNames->object<NS::String>(i);
+        const auto* name = functionName->utf8String();
         loadPipeline(pComputeLibrary, name, name);
     }
 

@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows
+CMAKE_SOURCE_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows/build
+CMAKE_BINARY_DIR = /Users/robbiealexander/Projects/Cpp/meadows-cpp/build
 
 # Utility rule file for CompileShaders.
 
@@ -70,20 +70,20 @@ shaders/CMakeFiles/CompileShaders: shaders/compute.metallib
 shaders/CMakeFiles/CompileShaders: shaders/shader.metallib
 
 shaders/compute.metallib: shaders/compute.air
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Compiling compute AIR to Metal library"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && xcrun -sdk macosx metallib /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/compute.air -o /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/compute.metallib
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Compiling compute AIR to Metal library"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && xcrun -sdk macosx metallib /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/compute.air -o /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/compute.metallib
 
 shaders/shader.metallib: shaders/shader.air
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Compiling shader AIR to Metal library"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && xcrun -sdk macosx metallib /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/shader.air -o /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/shader.metallib
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Compiling shader AIR to Metal library"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && xcrun -sdk macosx metallib /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/shader.air -o /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/shader.metallib
 
-shaders/compute.air: /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metal
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Compiling compute.metal to AIR"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && xcrun -sdk macosx metal -c /Users/robbiealexander/Projects/Cpp/meadows/shaders/compute.metal -o /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/compute.air
+shaders/compute.air: /Users/robbiealexander/Projects/Cpp/meadows-cpp/shaders/compute.metal
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Compiling compute.metal to AIR"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && xcrun -sdk macosx metal -c /Users/robbiealexander/Projects/Cpp/meadows-cpp/shaders/compute.metal -o /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/compute.air
 
-shaders/shader.air: /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metal
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Compiling shader.metal to AIR"
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && xcrun -sdk macosx metal -c /Users/robbiealexander/Projects/Cpp/meadows/shaders/shader.metal -o /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/shader.air
+shaders/shader.air: /Users/robbiealexander/Projects/Cpp/meadows-cpp/shaders/shader.metal
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/robbiealexander/Projects/Cpp/meadows-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Compiling shader.metal to AIR"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && xcrun -sdk macosx metal -c /Users/robbiealexander/Projects/Cpp/meadows-cpp/shaders/shader.metal -o /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/shader.air
 
 CompileShaders: shaders/CMakeFiles/CompileShaders
 CompileShaders: shaders/compute.air
@@ -98,10 +98,10 @@ shaders/CMakeFiles/CompileShaders.dir/build: CompileShaders
 .PHONY : shaders/CMakeFiles/CompileShaders.dir/build
 
 shaders/CMakeFiles/CompileShaders.dir/clean:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build/shaders && $(CMAKE_COMMAND) -P CMakeFiles/CompileShaders.dir/cmake_clean.cmake
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders && $(CMAKE_COMMAND) -P CMakeFiles/CompileShaders.dir/cmake_clean.cmake
 .PHONY : shaders/CMakeFiles/CompileShaders.dir/clean
 
 shaders/CMakeFiles/CompileShaders.dir/depend:
-	cd /Users/robbiealexander/Projects/Cpp/meadows/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/robbiealexander/Projects/Cpp/meadows /Users/robbiealexander/Projects/Cpp/meadows/shaders /Users/robbiealexander/Projects/Cpp/meadows/build /Users/robbiealexander/Projects/Cpp/meadows/build/shaders /Users/robbiealexander/Projects/Cpp/meadows/build/shaders/CMakeFiles/CompileShaders.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/robbiealexander/Projects/Cpp/meadows-cpp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/robbiealexander/Projects/Cpp/meadows-cpp /Users/robbiealexander/Projects/Cpp/meadows-cpp/shaders /Users/robbiealexander/Projects/Cpp/meadows-cpp/build /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders /Users/robbiealexander/Projects/Cpp/meadows-cpp/build/shaders/CMakeFiles/CompileShaders.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : shaders/CMakeFiles/CompileShaders.dir/depend
 

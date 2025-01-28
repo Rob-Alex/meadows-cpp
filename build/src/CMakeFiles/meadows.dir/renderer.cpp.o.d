@@ -1,33 +1,58 @@
 src/CMakeFiles/meadows.dir/renderer.cpp.o: \
-  /Users/robbiealexander/Projects/Cpp/meadows/src/renderer.cpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/lib/renderer.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/lib/simulator.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/lib/config.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/Metal.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLAccelerationStructure.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLDefines.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/../Foundation/NSDefines.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLHeaderBridge.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLPrivate.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/src/renderer.cpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/lib/renderer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/lib/simulator.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/lib/config.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/lib/GLFW/glfw3.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config_site \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_header_macro.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_ptrdiff_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_size_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_wchar_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_null.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_nullptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_max_align_t.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_offsetof.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/stdint.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint8_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint16_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint32_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint64_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/cdefs.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_posix_availability.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/machine/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/arm/_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_intptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_uintptr_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_intmax_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uintmax_t.h \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/Foundation.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSArray.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSObject.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSDefines.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSPrivate.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/objc/runtime.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/objc/objc.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stdlib.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__config_site \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityVersions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityInternal.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityInternalLegacy.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/cdefs.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_symbol_aliasing.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_posix_availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/machine/_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/arm/_types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/wait.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_pid_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_id_t.h \
@@ -41,16 +66,10 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/mach/arm/_structs.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/machine/types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/arm/types.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int8_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int16_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int32_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_int64_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_u_int8_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_u_int16_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_u_int32_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_u_int64_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_intptr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_sigaltstack.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_ucontext.h \
@@ -58,15 +77,6 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_size_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_uid_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/resource.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint8_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint16_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint32_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uint64_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_intmax_t.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_types/_uintmax_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_timeval.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/machine/endian.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/arm/endian.h \
@@ -90,17 +100,7 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/objc/objc-api.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/AvailabilityMacros.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/TargetConditionals.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_header_macro.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_ptrdiff_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_size_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_rsize_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_wchar_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_null.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_nullptr_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_max_align_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_offsetof.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_u_char.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_u_short.h \
@@ -150,12 +150,7 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_arg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg___va_copy.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_copy.h \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/Foundation.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSArray.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSObject.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSDefines.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSPrivate.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSTypes.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSTypes.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/_assert.h \
@@ -415,6 +410,8 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_s_ifmt.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_filesec_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/os/object.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/objc/NSObject.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/objc/NSObjCRuntime.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/os/workgroup.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/os/workgroup_base.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/os/clock.h \
@@ -464,14 +461,14 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFXMLNode.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFXMLParser.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/objc/message.h \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSAutoreleasePool.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSBundle.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSNotification.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSDictionary.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSEnumerator.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSString.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSObjCRuntime.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSRange.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSAutoreleasePool.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSBundle.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSNotification.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSDictionary.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSEnumerator.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSString.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSObjCRuntime.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSRange.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/functional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/search.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -1072,24 +1069,30 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSData.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSDate.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSError.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSLock.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSNumber.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSProcessInfo.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSSet.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSSharedPtr.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Foundation/NSURL.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLAccelerationStructureTypes.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLResource.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLStageInputOutputDescriptor.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/../Foundation/NSRange.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLTypes.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLAccelerationStructureCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLArgument.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLTexture.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLPixelFormat.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSData.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSDate.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSError.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSLock.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSNumber.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSProcessInfo.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSSet.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSSharedPtr.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Foundation/NSURL.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/Metal.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLAccelerationStructure.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLDefines.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/../Foundation/NSDefines.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLHeaderBridge.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLPrivate.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLAccelerationStructureTypes.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLResource.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLStageInputOutputDescriptor.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/../Foundation/NSRange.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLTypes.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLAccelerationStructureCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLArgument.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLTexture.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLPixelFormat.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/IOSurface.framework/Headers/IOSurfaceRef.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/IOSurface.framework/Headers/IOSurfaceBase.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/mach/mach_types.h \
@@ -1187,82 +1190,81 @@ src/CMakeFiles/meadows.dir/renderer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/mach/mach_error.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/mach/error.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/IOSurface.framework/Headers/IOSurfaceTypes.h \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLArgumentEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLBinaryArchive.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLBlitCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLBlitPass.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLBuffer.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLCaptureManager.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLCaptureScope.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/../Foundation/NSObject.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/../Foundation/NSString.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLCommandBuffer.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLCommandQueue.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLComputeCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLComputePass.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLComputePipeline.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLCounters.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLDepthStencil.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLDevice.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLDrawable.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLDynamicLibrary.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLEvent.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLFence.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLFunctionConstantValues.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLFunctionDescriptor.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLFunctionHandle.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLLibrary.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLFunctionLog.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLFunctionStitching.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLHeap.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLIndirectCommandBuffer.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLIndirectCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLRenderCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLRenderPass.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLIntersectionFunctionTable.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLIOCommandBuffer.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLIOCommandQueue.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLIOCompressor.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLLinkedFunctions.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLParallelRenderCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLPipeline.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLRasterizationRate.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLRenderPipeline.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLResourceStateCommandEncoder.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLResourceStatePass.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLSampler.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLVertexDescriptor.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLVisibleFunctionTable.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/Metal/MTLVersion.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/AppKit.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/AppKitPrivate.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/NSApplication.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/NSRunningApplication.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/NSWindow.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/NSView.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLArgumentEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLBinaryArchive.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLBlitCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLBlitPass.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLBuffer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLCaptureManager.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLCaptureScope.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/../Foundation/NSObject.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/../Foundation/NSString.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLCommandBuffer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLCommandQueue.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLComputeCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLComputePass.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLComputePipeline.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLCounters.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLDepthStencil.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLDevice.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLDrawable.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLDynamicLibrary.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLEvent.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLFence.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLFunctionConstantValues.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLFunctionDescriptor.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLFunctionHandle.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLLibrary.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLFunctionLog.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLFunctionStitching.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLHeap.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLIndirectCommandBuffer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLIndirectCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLRenderCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLRenderPass.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLIntersectionFunctionTable.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLIOCommandBuffer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLIOCommandQueue.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLIOCompressor.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLLinkedFunctions.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLParallelRenderCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLPipeline.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLRasterizationRate.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLRenderPipeline.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLResourceStateCommandEncoder.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLResourceStatePass.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLSampler.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLVertexDescriptor.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLVisibleFunctionTable.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/Metal/MTLVersion.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/CAMetalLayer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/../Metal/MTLPixelFormat.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/../Metal/MTLTexture.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGBase.h \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/NSMenu.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/AppKit/NSMenuItem.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/MetalKit/MetalKit.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/MetalKit/MTKView.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp-extensions/MetalKit/MetalKitPrivate.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/QuartzCore.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/CAMetalDrawable.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/../Metal/MTLDrawable.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/../Metal/MTLTexture.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/CADefines.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/../Foundation/NSDefines.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/CAPrivate.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/CAMetalLayer.hpp \
-  /Users/robbiealexander/Projects/Cpp/meadows/metal-cmake/metal-cpp/QuartzCore/../Metal/MTLPixelFormat.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/CADefines.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/../Foundation/NSDefines.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/CAMetalDrawable.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/../Metal/MTLDrawable.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/CAPrivate.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp/QuartzCore/QuartzCore.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/AppKit.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/AppKitPrivate.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/NSApplication.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/NSRunningApplication.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/NSWindow.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/NSView.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/NSMenu.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/AppKit/NSMenuItem.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/MetalKit/MetalKit.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/MetalKit/MTKView.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/metal-cmake/metal-cpp-extensions/MetalKit/MetalKitPrivate.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGColorSpace.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDataProvider.h \
-  /Users/robbiealexander/Projects/Cpp/meadows/lib/mtl_computer.hpp \
+  /Users/robbiealexander/Projects/Cpp/meadows-cpp/lib/mtl_computer.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__filesystem/copy_options.h \

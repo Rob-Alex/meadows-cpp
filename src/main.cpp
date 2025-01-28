@@ -10,22 +10,20 @@
 #define MTK_PRIVATE_IMPLEMENTATION
 #define CA_PRIVATE_IMPLEMENTATION
 
-#include "app_delegate.hpp"
+
+#include "config.hpp"
+#include "app.hpp"
 
 
 int main(int argc, const char * argv[]) {
 
     NS::AutoreleasePool* pAutoreleasePool = NS::AutoreleasePool::alloc()->init();
-    AppDelegate del;
-    NS::Application* pSharedApplication = NS::Application::sharedApplication();
 
-    pSharedApplication->setDelegate( &del );
-
-    pSharedApplication->run();
-
-    // This is a comments
-    // this is another commment
+    App* app = new App();
+    app->run();
     
+    delete app;
+
     pAutoreleasePool->release();
     return 0;
 }

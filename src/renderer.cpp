@@ -1,9 +1,8 @@
 #include "renderer.hpp"
 
-Renderer::Renderer( MTL::Device* pDevice, ISimulator* pSimulator )
-: _pDevice( pDevice->retain() ), _pSimulator(pSimulator)
+Renderer::Renderer( MTL::Device* pDevice, ISimulator* pSimulator, CA::MetalLayer* pMTLlayer)
+: _pDevice( pDevice->retain() ), _pSimulator(pSimulator), _pMtlLayer(pMTLlayer->retain()), _pCommandQueue(_pDevice->retain()->newCommandQueue()->retain())
 {
-    _pCommandQueue = _pDevice->newCommandQueue();
     buildShaders();
     buildMeshes();
     buildBuffers();
@@ -207,9 +206,9 @@ void Renderer::updateMeshData()
 
             _positions[j * gridWidth + i] = simd::make_float3(x, y, 0.0f);
 
-            float red = (cosf(value) * 0.5f + 0.5f); //(sinf(value + 0.5f) * 0.5f + 0.5f);
+            float red = (sinf(value + 0.5f) * 0.5f + 0.5f); //(sinf(value + 0.5f) * 0.5f + 0.5f);
             float green = (cosf(value) * 0.5f + 0.5f);
-            float blue = (cosf(value) * 0.5f + 0.5f); //0.5f;
+            float blue = 0.5f; //(cosf(value) * 0.5f + 0.5f); //0.5f;
             _colors[j * gridWidth + i] = simd::make_float3(red, green, blue);
         }
     }
@@ -231,15 +230,24 @@ void Renderer::updateBuffers()
     _pVertexColorsBuffer->didModifyRange(NS::Range::Make(0, colorsDataSize));
 } 
 
-void Renderer::draw(MTK::View* pView)
+void Renderer::draw()
 {
     NS::AutoreleasePool* pPool = NS::AutoreleasePool::alloc()->init();
 
     MTL::CommandBuffer* pCmd = _pCommandQueue->commandBuffer();
-    MTL::RenderPassDescriptor* pRpd = pView->currentRenderPassDescriptor();
+    MTL::RenderPassDescriptor* pRpd = MTL::RenderPassDescriptor::alloc()->init();
     assert(pRpd && "Render pass descriptor is null");
 
+
+    _pMtlDraw = _pMtlLayer->nextDrawable();
+    MTL::RenderPassColorAttachmentDescriptor* pRca = pRpd->colorAttachments()->object(0);
+    pRca->setTexture(_pMtlDraw->texture());
+    pRca->setLoadAction(MTL::LoadActionClear);
+    pRca->setClearColor(MTL::ClearColor(0.3f, 0.3f, 0.3f, 1.0f));
+    pRca->setStoreAction(MTL::StoreActionStore);
+
     MTL::RenderCommandEncoder* pEnc = pCmd->renderCommandEncoder(pRpd);
+
     pEnc->setRenderPipelineState(_pPSO);
     pEnc->setVertexBuffer(_pArgBuffer, 0, 0);
 
@@ -253,7 +261,7 @@ void Renderer::draw(MTK::View* pView)
                                 _pIndexBuffer, 0);
 
     pEnc->endEncoding();
-    pCmd->presentDrawable(pView->currentDrawable());
+    pCmd->presentDrawable(_pMtlDraw);
     pCmd->commit();
 
     pPool->release();
