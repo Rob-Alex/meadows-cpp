@@ -9,8 +9,9 @@ App::App()
     glfwSetWindowUserPointer(_pGLFWwindow, this);
 
     // Set GLFW mouse input callbacks
-    glfwSetCursorPosCallback(_pGLFWwindow, App::mouseMoveCallback);
-    glfwSetMouseButtonCallback(_pGLFWwindow, App::mouseButtonCallback);
+    // Todo: Add functionality 
+    //glfwSetCursorPosCallback(_pGLFWwindow, App::mouseMoveCallback);
+    //glfwSetMouseButtonCallback(_pGLFWwindow, App::mouseButtonCallback);
 
     _pDevice = MTL::CreateSystemDefaultDevice();
 

@@ -39,7 +39,7 @@ class Simulator {
 class ISimulator { 
     public: 
         virtual ~ISimulator() = default;
-        virtual void initialize() = 0;  
+        virtual void initialize() = 0;
         virtual void update(float timestep) = 0;
         virtual void reset() = 0;
         virtual MTL::Buffer* getSimulationBuffer() const = 0;
@@ -138,5 +138,29 @@ class MaxwellSolver : public ISimulator
 
         mtl_computer _gpuComputer;
 };
+
+class LBMSolver : public ISimulator 
+{
+    public:
+        LBMSolver(MTL::Device* pDevice, size_t, size_t);
+        ~LBMSolver() noexcept override;
+
+        void initialize() override;
+        void update(float timeStep) override;
+        void reset() override;
+        MTL::Buffer* getSimulationBuffer() const override {return _pSimulationBuffer1; }
+    private:
+        void loadComputePipelines();
+        size_t _gridWidth, _gridHeight;
+        MTL::Device* _pDevice;
+        MTL::CommandQueue* _pCmdQ;
+
+        MTL::Buffer* _pSimulationBuffer1;
+        MTL::Buffer* _pSimulationBuffer2;
+
+        mtl_computer _gpuComputer; 
+};
+
+
 
 #endif 

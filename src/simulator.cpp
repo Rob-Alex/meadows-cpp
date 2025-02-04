@@ -224,3 +224,48 @@ void MaxwellSolver::reset()
     _pPotentialBuffer->didModifyRange(NS::Range::Make(0, bufferSize));   
     __builtin_printf("Simulation reset: buffers cleared"); 
 }
+
+//-----------------------------------------------------------------------------
+
+//--------------Lattice Boltzmann Solver---------------------------------------
+
+LBMSolver::LBMSolver(MTL::Device* pDevice, size_t gridWidth, size_t gridHeight)
+    : _pDevice(pDevice), _gridWidth(gridWidth), _gridHeight(gridHeight), _gpuComputer(pDevice)
+{
+    _pCmdQ = _pDevice->newCommandQueue(); 
+    const size_t bufferSize = gridWidth * gridHeight * sizeof(float); 
+    _pSimulationBuffer1 = _pDevice->newBuffer(bufferSize, MTL::ResourceStorageModeManaged);
+    _pSimulationBuffer2 = _pDevice->newBuffer(bufferSize, MTL::ResourceStorageModeManaged);
+
+    if (!_pSimulationBuffer1 || !_pSimulationBuffer2) 
+    {
+        __builtin_printf("Error: failed to allocate buffers");
+    }
+    reset();
+}
+
+LBMSolver::~LBMSolver() noexcept 
+{
+    _pSimulationBuffer1->release();
+    _pSimulationBuffer2->release();
+}
+
+void LBMSolver::initialize()
+{
+
+}
+
+void LBMSolver::update(float timeStep)
+{
+
+}
+
+void LBMSolver::reset()
+{
+
+}
+
+void LBMSolver::loadComputePipelines()
+{
+
+}
