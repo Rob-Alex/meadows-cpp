@@ -2,3 +2,4 @@ build/
 .vscode/
 .cached/
 .DS_Store
+.cache/
