@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+set_and_check(MetalCpp_INCLUDE_DIR "@PACKAGE_INSTALL_DESTINATION@/include")
+set(MetalCpp_LIBRARIES METAL_CPP)
+
+check_required_components(MetalCpp)
+
